@@ -1,3 +1,6 @@
+//import from framer-motion
+import { motion } from "framer-motion";
+
 import "./Navbar.css";
 
 //create and export Navbar child component
@@ -8,10 +11,22 @@ const Navbar = () => {
       {/* End: Sidebar */}
       <div className="navbar-wrapper">
         {/* Brand Logo: Start */}
-        <span className="navbar-brand">Animal Shelter</span>
+        <motion.span
+          className="navbar-brand"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          Animal Shelter
+        </motion.span>
         {/* End: Brand Logo */}
         {/* Images for Links: Start */}
-        <div className="navbar-social">
+        <motion.div
+          className="navbar-social"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           <a href="#">
             <img
               src="https://github.com/safak/animated-portfolio/blob/completed/public/facebook.png?raw=true"
@@ -31,7 +46,7 @@ const Navbar = () => {
               alt="web logo"
             />
           </a>
-        </div>
+        </motion.div>
         {/* End: Images for Links */}
       </div>
     </div>
