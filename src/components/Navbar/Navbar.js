@@ -1,3 +1,5 @@
+import "./Navbar.css";
+
 //create and export Navbar child component
 const Navbar = () => {
   return (

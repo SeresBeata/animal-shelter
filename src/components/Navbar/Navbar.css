@@ -1,0 +1,25 @@
+/* Color Palette and Typography: Start */
+/* End: Color Palette and Typography */
+.navbar {
+  height: 100px;
+}
+.navbar .navbar-wrapper {
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.navbar .navbar-wrapper .navbar-brand {
+  color: #ac00e6;
+  font-weight: 600;
+}
+.navbar .navbar-wrapper .navbar-social {
+  display: flex;
+  gap: 20px;
+}
+.navbar .navbar-wrapper .navbar-social img {
+  width: 18px;
+  height: 18px;
+}/*# sourceMappingURL=Navbar.css.map */
