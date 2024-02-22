@@ -1,3 +1,60 @@
-body {
-  background-color: aqua;
+/********************** GENERAL SETTINGS: START **********************/
+/* Color Palette and Typography: Start */
+$brand-color-primary: #ac00e6;
+$brand-color-secondary: lighten($brand-color-primary, 10%);
+$base-color-primary: #0c0c1d;
+$base-color-secondary: #232922;
+$base-color-secondary-light: #2e3744;
+$text-color-primary: #d3d3d3;
+$text-color-secondary: #b3b4b6;
+
+$font-family-heading: "Barlow Condensed", sans-serif;
+$font-family-base: "DM Sans", sans-serif;
+$font-size-base: 20px;
+$font-size-medium: 30px;
+$font-size-large: 40px;
+$font-size-x-large: 50px;
+$font-size-xx-large: 60px;
+$font-size-xxx-large: 70px;
+$font-weight-base: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 600;
+/* End: Color Palette and Typography */
+
+/* html: Start */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
+/* End: html */
+
+/* Universal Selector: Start */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* End: Universal Selector */
+
+/* Body: Start */
+body {
+  background-color: $base-color-primary;
+  color: $text-color-primary;
+  font-family: $font-family-base;
+}
+/* End: Body */
+
+/* section: Start */
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+/* End: section */
+
+/*  anchor: Start */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* End: anchor */
+/********************** END: GENERAL SETTINGS **********************/

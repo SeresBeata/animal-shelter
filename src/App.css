@@ -1,3 +1,42 @@
+/********************** GENERAL SETTINGS: START **********************/
+/* Color Palette and Typography: Start */
+/* End: Color Palette and Typography */
+/* html: Start */
+html {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* End: html */
+/* Universal Selector: Start */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* End: Universal Selector */
+/* Body: Start */
 body {
-  background-color: aqua;
-}/*# sourceMappingURL=App.css.map */
+  background-color: #0c0c1d;
+  color: #d3d3d3;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* End: Body */
+/* section: Start */
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* End: section */
+/*  anchor: Start */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* End: anchor */
+/********************** END: GENERAL SETTINGS **********************//*# sourceMappingURL=App.css.map */
