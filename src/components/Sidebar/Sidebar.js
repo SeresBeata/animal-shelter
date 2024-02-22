@@ -2,6 +2,7 @@
 import ToggleBtn from "./ToggleBtn/ToggleBtn";
 import Links from "./Links/Links";
 
+import "./Sidebar.css";
 //create and export Sidebar child component
 const Sidebar = () => {
   return (
