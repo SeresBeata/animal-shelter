@@ -1,6 +1,9 @@
 //import from framer-motion
 import { motion } from "framer-motion";
 
+//import Sidebar child component
+import Sidebar from "../Sidebar/Sidebar";
+
 import "./Navbar.css";
 
 //create and export Navbar child component
@@ -8,6 +11,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {/* Sidebar: Start */}
+      <Sidebar />
       {/* End: Sidebar */}
       <div className="navbar-wrapper">
         {/* Brand Logo: Start */}
