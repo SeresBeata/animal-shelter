@@ -1,10 +1,14 @@
 //import child components
 import ToggleBtn from "./ToggleBtn/ToggleBtn";
+import Links from "./Links/Links";
+
 //create and export Sidebar child component
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebar-bg"></div>
+      <div className="sidebar-bg">
+        <Links />
+      </div>
       <ToggleBtn />
     </div>
   );
