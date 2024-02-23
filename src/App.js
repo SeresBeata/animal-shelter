@@ -1,5 +1,6 @@
-//import Navbar component
+//import child components
 import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 
 import "./App.css";
 
@@ -8,10 +9,7 @@ const App = () => {
     <div className="App">
       <section id="Homepage">
         <Navbar />
-        <img
-          src="https://jankrepl.github.io/assets/images/symbolic_regression/main_files/cute-dog-transparent-background.png"
-          alt="cute dog"
-        />
+        <Hero />
       </section>
       <section id="About">Parallax</section>
       <section>Summary</section>
