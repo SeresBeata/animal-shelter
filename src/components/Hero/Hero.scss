@@ -1,0 +1,75 @@
+/* Color Palette and Typography: Start */
+$hero-base-color-primary: #0c0c1d;
+$hero-base-color-secondary: #111132;
+$hero-brand-color-primary: rgb(102, 51, 153);
+$hero-btn-color-primary: rgb(255, 255, 255);
+$hero-slidingtext-color-primary: #ffffff09;
+/* End: Color Palette and Typography */
+
+.hero {
+  height: calc(100vh - 100px);
+  background: linear-gradient(
+    180deg,
+    $hero-base-color-primary,
+    $hero-base-color-secondary
+  );
+  position: relative;
+  overflow: hidden;
+
+  .hero-wrapper {
+    max-width: 1300px;
+    height: 100%;
+    margin: auto;
+
+    .hero-container--text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      h1 {
+        font-size: 88px;
+      }
+
+      h2 {
+        font-size: 30px;
+        color: $hero-brand-color-primary;
+        letter-spacing: 10px;
+      }
+
+      .hero-btns {
+        button {
+          padding: 20px;
+          border: 1px solid $hero-btn-color-primary;
+          border-radius: 10px;
+          background-color: transparent;
+          color: $hero-btn-color-primary;
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 300;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .hero-container--img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .hero-slidingtext {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -100px;
+    white-space: nowrap;
+    color: $hero-slidingtext-color-primary;
+  }
+}

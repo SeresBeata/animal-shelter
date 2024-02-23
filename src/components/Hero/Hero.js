@@ -1,3 +1,5 @@
+import "./Hero.css";
+
 //create and export Hero child component
 const Hero = () => {
   return (
