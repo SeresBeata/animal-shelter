@@ -1,3 +1,5 @@
+import "./Parallax.scss";
+
 //create and export Parallax child component
 const Parallax = ({ type }) => {
   return (
