@@ -1,6 +1,7 @@
 //import child components
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
+import Parallax from "./components/Parallax/Parallax";
 
 import "./App.css";
 
@@ -11,9 +12,13 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
-      <section id="About">Parallax</section>
+      <section id="About">
+        <Parallax type="about" />
+      </section>
       <section>Summary</section>
-      <section id="Stories">Parallax</section>
+      <section id="Stories">
+        <Parallax type="stories" />
+      </section>
       <section>Example1</section>
       <section>Example2</section>
       <section>Example3</section>
