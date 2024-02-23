@@ -15,6 +15,14 @@ const textVariants = {
       straggerChildren: 0.1,
     },
   },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
 };
 
 //create and export Hero child component
@@ -40,6 +48,7 @@ const Hero = () => {
           </motion.div>
           <motion.img
             variants={textVariants}
+            animate="scrollButton"
             src="https://github.com/safak/animated-portfolio/blob/completed/public/scroll.png?raw=true"
             alt="image about scrolling"
           />
