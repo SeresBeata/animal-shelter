@@ -13,6 +13,7 @@ $sidebar-font-size: 40px;
   color: $sidebar-text-color;
 
   .sidebar-bg {
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
@@ -45,5 +46,6 @@ $sidebar-font-size: 40px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 999;
   }
 }
