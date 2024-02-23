@@ -16,6 +16,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  z-index: 3;
 }
 .parallax .planets {
   background-image: url("https://github.com/safak/animated-portfolio/blob/completed/public/planets.png?raw=true");
@@ -24,6 +25,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  z-index: 2;
 }
 .parallax .stars {
   background-image: url("https://github.com/safak/animated-portfolio/blob/completed/public/stars.png?raw=true");
@@ -32,4 +34,5 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  z-index: 1;
 }/*# sourceMappingURL=Parallax.css.map */
