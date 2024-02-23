@@ -36,7 +36,17 @@ const Parallax = ({ type }) => {
         {type === "about" ? "Help us!" : "What to do?"}
       </motion.h1>
       <motion.div className="mountains"></motion.div>
-      <motion.div style={{ y: yBg }} className="planets"></motion.div>
+      <motion.div
+        style={{
+          y: yBg,
+          backgroundImage: `url(${
+            type === "about"
+              ? "https://github.com/safak/animated-portfolio/blob/completed/public/planets.png?raw=true"
+              : "https://github.com/safak/animated-portfolio/blob/starter/public/sun.png?raw=true"
+          })`,
+        }}
+        className="planets"
+      ></motion.div>
       <motion.div style={{ x: yBg }} className="stars"></motion.div>
     </div>
   );
