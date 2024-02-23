@@ -25,6 +25,21 @@ const textVariants = {
   },
 };
 
+//create const for sliding-text animation
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 20,
+    },
+  },
+};
+
 //create and export Hero child component
 const Hero = () => {
   return (
@@ -54,7 +69,14 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="hero-slidingtext">Animal Love Protect Care</div>
+      <motion.div
+        className="hero-slidingtext"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        Animal Love Protect Care
+      </motion.div>
       <div className="hero-container--img">
         <img
           style={{
