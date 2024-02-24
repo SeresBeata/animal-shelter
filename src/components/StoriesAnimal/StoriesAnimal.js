@@ -1,3 +1,8 @@
+import { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+
+import "./StroriesAnimal.css";
+
 //create array
 const items = [
   {
@@ -43,8 +48,29 @@ const Single = ({ item }) => {
 
 //create and export StoriesAnimal child component
 const StoriesAnimal = () => {
+  //use useRef Hook to listen to target element
+  const ref = useRef();
+
+  //use useScroll Hook for progress bar animation
+  //pass the target element, that is being listened
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+
+  //use useSpring Hook - it creates a spring type of transition
+  //pass scrollYProgress and add transition options
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
   return (
-    <div className="stories">
+    <div className="stories" ref={ref}>
+      <div className="progress">
+        <h1>Why adopt an animal?</h1>
+        <motion.div
+          style={{ scaleX: scaleX }}
+          className="progress-bar"
+        ></motion.div>
+      </div>
       {/* use array.map() to to render a list of items */}
       {items.map((item) => (
         <Single item={item} key={item.id} />

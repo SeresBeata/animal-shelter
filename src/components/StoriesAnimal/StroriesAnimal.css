@@ -1,0 +1,17 @@
+.stories {
+  position: relative;
+}
+.stories .progress {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  text-align: center;
+  color: orange;
+  font-size: 36px;
+}
+.stories .progress .progress-bar {
+  height: 10px;
+  background-color: white;
+}/*# sourceMappingURL=StroriesAnimal.css.map */
