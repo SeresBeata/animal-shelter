@@ -2,17 +2,40 @@ import { motion } from "framer-motion";
 
 import "./About.css";
 
+//create const for element-animation
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 //create and export About child component
 const About = () => {
   return (
-    <div className="about">
-      <div className="about-text--container">
+    <motion.div
+      className="about"
+      variants={variants}
+      initial="initial"
+      animate="animate"
+    >
+      <motion.div className="about-text--container" variants={variants}>
         <p>
           Focus on helping animals in need! <br /> Adopt a furry Friend!
         </p>
         <hr />
-      </div>
-      <div className="about-title--container">
+      </motion.div>
+      <motion.div className="about-title--container" variants={variants}>
         <div className="about-title">
           <img
             src="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -28,8 +51,8 @@ const About = () => {
           </h1>
           <button>WHAT TO DO?</button>
         </div>
-      </div>
-      <div className="about-list--container">
+      </motion.div>
+      <motion.div className="about-list--container" variants={variants}>
         <motion.div
           className="about-list--box"
           whileHover={{ background: "lightgray", color: "black" }}
@@ -74,8 +97,8 @@ const About = () => {
           </p>
           <button>Go</button>
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
