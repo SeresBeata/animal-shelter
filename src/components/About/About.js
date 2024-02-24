@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 import "./About.css";
 
@@ -22,12 +23,23 @@ const variants = {
 
 //create and export About child component
 const About = () => {
+  //use useRef Hook  listen to target element
+  const ref = useRef();
+
+  //use useInView Hook
+  //pass the target element, that is being listened
+  //give margin, and by scrolling, this margin triggers the animation
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <motion.div
       className="about"
       variants={variants}
       initial="initial"
-      animate="animate"
+      // animate="animate"
+      ref={ref}
+      //if it is in view, the animation will be triggered
+      animate={isInView && "animate"}
     >
       <motion.div className="about-text--container" variants={variants}>
         <p>
