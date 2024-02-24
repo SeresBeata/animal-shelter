@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import "./About.css";
 
 //create and export About child component
@@ -28,38 +30,50 @@ const About = () => {
         </div>
       </div>
       <div className="about-list--container">
-        <div className="about-list--box">
+        <motion.div
+          className="about-list--box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Adopt a Doggie!</h2>
           <p>
             A dog provides unconditional love and support. They are "man's best
             friend".
           </p>
           <button>Go</button>
-        </div>
-        <div className="about-list--box">
+        </motion.div>
+        <motion.div
+          className="about-list--box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Adopt a Kitty!</h2>
           <p>
             Cats enrich our lives! They give us comfort, companionship and
             purpose.
           </p>
           <button>Go</button>
-        </div>
-        <div className="about-list--box">
+        </motion.div>
+        <motion.div
+          className="about-list--box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Adopt a Bunny!</h2>
           <p>
             Bunnies make wonderful companions. They will make you smile when
             you're down!
           </p>
           <button>Go</button>
-        </div>
-        <div className="about-list--box">
+        </motion.div>
+        <motion.div
+          className="about-list--box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Adopt a Parrot!</h2>
           <p>
             They are intelligent, problem-solving, funny and caring cuddle
             friends!
           </p>
           <button>Go</button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
