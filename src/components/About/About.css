@@ -1,0 +1,78 @@
+/* Color Palette and Typography: Start */
+/* End: Color Palette and Typography */
+.about {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about .about-text--container {
+  flex: 1;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.about .about-text--container p {
+  font-weight: 200;
+  font-style: 200px;
+  color: rgb(128, 128, 128);
+  text-align: right;
+}
+.about .about-text--container hr {
+  width: 500px;
+  border: none;
+  border-top: 0.5px solid rgb(128, 128, 128);
+}
+.about .about-title--container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .about-title--container .about-title {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.about .about-title--container .about-title img {
+  width: 300px;
+  height: 100px;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: opacity(0.75) drop-shadow(0 0 0 rgb(136, 0, 255));
+}
+.about .about-title--container .about-title h1 {
+  font-size: 96px;
+  font-weight: 100;
+}
+.about .about-title--container .about-title button {
+  width: 300px;
+  height: 100px;
+  border-radius: 50px;
+  background: rgb(255, 165, 0);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.about .about-list--container {
+  flex: 2;
+  display: flex;
+  max-width: 1300px;
+  margin: auto;
+}
+.about .about-list--container .about-list--box {
+  padding: 50px;
+  border: 0.5px solid rgb(128, 128, 128);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about .about-list--container .about-list--box button {
+  padding: 10px;
+  background: rgb(255, 165, 0);
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=About.css.map */

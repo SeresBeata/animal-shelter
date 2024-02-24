@@ -1,3 +1,5 @@
+import "./About.css";
+
 //create and export About child component
 const About = () => {
   return (
