@@ -2,6 +2,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Parallax from "./components/Parallax/Parallax";
+import About from "./components/About/About";
 
 import "./App.css";
 
@@ -15,7 +16,9 @@ const App = () => {
       <section id="Help us!">
         <Parallax type="about" />
       </section>
-      <section>Summary</section>
+      <section>
+        <About />
+      </section>
       <section id="What to do?">
         <Parallax type="stories" />
       </section>
