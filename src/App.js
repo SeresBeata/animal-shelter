@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Parallax from "./components/Parallax/Parallax";
 import About from "./components/About/About";
+import StoriesAnimal from "./components/StoriesAnimal/StoriesAnimal";
 
 import "./App.css";
 
@@ -22,9 +23,7 @@ const App = () => {
       <section id="What to do?">
         <Parallax type="stories" />
       </section>
-      <section>Example1</section>
-      <section>Example2</section>
-      <section>Example3</section>
+      <StoriesAnimal />
       <section id="Contact">Contact</section>
     </div>
   );
