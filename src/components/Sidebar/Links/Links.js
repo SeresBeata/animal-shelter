@@ -27,7 +27,7 @@ const itemVariants = {
 
 //create and export Links child component
 const Links = () => {
-  const items = ["Homepage", "About", "Stories", "Contact"];
+  const items = ["Homepage", "Help us!", "What to do?", "Contact"];
 
   return (
     <motion.div className="links" variants={variants}>
