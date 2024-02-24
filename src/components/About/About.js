@@ -39,7 +39,8 @@ const About = () => {
       // animate="animate"
       ref={ref}
       //if it is in view, the animation will be triggered
-      animate={isInView && "animate"}
+      //animate={isInView && "animate"}
+      whileInView="animate"
     >
       <motion.div className="about-text--container" variants={variants}>
         <p>
