@@ -55,12 +55,13 @@ const About = () => {
             alt="little kittens"
           />
           <h1>
-            <b>Unique </b>Friends
+            <motion.b whileHover={{ color: "orange" }}>Unique </motion.b>Friends
           </h1>
         </div>
         <div className="about-title">
           <h1>
-            <b>For Your </b>Family
+            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
+            Family
           </h1>
           <button>WHAT TO DO?</button>
         </div>
