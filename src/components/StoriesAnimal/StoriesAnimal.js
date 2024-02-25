@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import "./StroriesAnimal.css";
 
@@ -37,18 +37,32 @@ const items = [
 
 //create Single component: return section
 const Single = ({ item }) => {
+  //use useRef hook, where the target is <div className="single-container--img">
+  const ref = useRef();
+
+  //use useScroll Hook for section animation
+  //pass the target element, that is being listened
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    // offset: ["start start", "end start"],
+  });
+
+  //use useTransform Hook
+  //pass scrollYProgress
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
   return (
     <section>
       <div className="single-container">
         <div className="single-wrapper">
-          <div className="single-container--img">
+          <div className="single-container--img" ref={ref}>
             <img src={item.img} />
           </div>
-          <div className="single-container--text">
+          <motion.div className="single-container--text" style={{ y: y }}>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <button>Adopt a shelter Pet!</button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
