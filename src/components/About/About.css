@@ -56,6 +56,16 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
+  transition-duration: 0.2s;
+  transition-property: scale;
+}
+.about .about-title--container .about-title button:hover {
+  background-color: transparent;
+  border: 1px solid orange;
+  color: orange;
+}
+.about .about-title--container .about-title button:active {
+  scale: 0.9;
 }
 .about .about-list--container {
   flex: 2;
@@ -75,4 +85,13 @@
   background: rgb(255, 165, 0);
   border: none;
   cursor: pointer;
+  transition-duration: 0.2s;
+  transition-property: scale;
+}
+.about .about-list--container .about-list--box button:hover {
+  background-color: #111132;
+  color: white;
+}
+.about .about-list--container .about-list--box button:active {
+  scale: 0.9;
 }/*# sourceMappingURL=About.css.map */
