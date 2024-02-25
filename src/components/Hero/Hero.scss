@@ -50,6 +50,18 @@ $hero-slidingtext-color-primary: #ffffff09;
           margin-right: 20px;
           cursor: pointer;
           font-weight: 300;
+
+          transition-duration: 0.2s;
+          transition-property: scale;
+
+          &:hover {
+            background-color: $hero-btn-color-primary;
+            // border: 1px solid orange;
+            color: black;
+          }
+          &:active {
+            scale: 0.9;
+          }
         }
       }
 

@@ -39,6 +39,15 @@
   margin-right: 20px;
   cursor: pointer;
   font-weight: 300;
+  transition-duration: 0.2s;
+  transition-property: scale;
+}
+.hero .hero-wrapper .hero-container--text .hero-btns button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.hero .hero-wrapper .hero-container--text .hero-btns button:active {
+  scale: 0.9;
 }
 .hero .hero-wrapper .hero-container--text img {
   width: 50px;
