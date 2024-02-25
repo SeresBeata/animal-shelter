@@ -40,6 +40,7 @@ $hero-slidingtext-color-primary: #ffffff09;
       }
 
       .hero-btns {
+        z-index: 1;
         button {
           padding: 20px;
           border: 1px solid $hero-btn-color-primary;
