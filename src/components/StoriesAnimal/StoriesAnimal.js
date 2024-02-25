@@ -39,9 +39,18 @@ const items = [
 const Single = ({ item }) => {
   return (
     <section>
-      <div>{item.title}</div>
-      <img style={{ height: "500px" }} src={item.img} />
-      <div>{item.description}</div>
+      <div className="single-container">
+        <div className="single-wrapper">
+          <div className="single-container--img">
+            <img src={item.img} />
+          </div>
+          <div className="single-container--text">
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+            <button>Adopt a shelter Pet!</button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
