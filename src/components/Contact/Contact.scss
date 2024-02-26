@@ -44,6 +44,7 @@
         border: 1px solid white;
         color: white;
         border-radius: 5px;
+        z-index: 1;
       }
 
       button {
@@ -54,6 +55,7 @@
         font-weight: 500;
         transition-duration: 0.2s;
         transition-property: scale;
+        z-index: 1;
 
         &:hover {
           background-color: transparent;
