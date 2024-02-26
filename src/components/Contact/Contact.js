@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import "./Contact.scss";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 //create const for animation
 const variants = {
@@ -13,12 +13,21 @@ const variants = {
 
 //create and export Contact child component
 const Contact = () => {
+  //use useRef Hook, in this case <div className="contact" is the targert>
+  const ref = useRef();
+
+  //when target elemnt is visible, it triggers the useinView Hook
+  //pass the target
+  //add margin
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <motion.div
       className="contact"
       variants={variants}
       initial="initial"
       whileInView="animate"
+      ref={ref}
     >
       <motion.div className="contact-container--text" variants={variants}>
         <motion.h1 variants={variants}>Contact a shelter</motion.h1>
@@ -47,6 +56,11 @@ const Contact = () => {
             <motion.path
               strokeWidth={0.2}
               fill="none"
+              // to animate svg: start
+              initial={{ pathLength: 0 }}
+              animate={isInView && { pathLength: 1 }}
+              transition={{ duration: 3 }}
+              // end: to animate svg
               d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
