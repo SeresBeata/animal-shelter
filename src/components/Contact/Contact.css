@@ -21,6 +21,12 @@
 }
 .contact .contact-container--form {
   flex: 1;
+  position: relative;
+}
+.contact .contact-container--form .phone-svg {
+  stroke: orange;
+  position: absolute;
+  margin: auto;
 }
 .contact .contact-container--form form {
   display: flex;

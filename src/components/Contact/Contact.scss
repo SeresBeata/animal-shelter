@@ -23,6 +23,14 @@
 
   .contact-container--form {
     flex: 1;
+    position: relative;
+
+    .phone-svg {
+      //background-color: rebeccapurple; - use for test
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+    }
 
     form {
       display: flex;
