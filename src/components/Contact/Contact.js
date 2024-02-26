@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import "./Contact.css";
 
 //create const for animation
 const variants = {
