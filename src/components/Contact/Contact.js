@@ -1,3 +1,5 @@
+import "./Contact.scss";
+
 //create and export Contact child component
 const Contact = () => {
   return (

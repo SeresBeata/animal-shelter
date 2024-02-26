@@ -1,0 +1,54 @@
+.contact {
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.contact .contact-container--text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contact .contact-container--text h1 {
+  font-size: 100px;
+  line-height: 88px;
+}
+.contact .contact-container--text span {
+  font-weight: 300;
+}
+.contact .contact-container--form {
+  flex: 1;
+}
+.contact .contact-container--form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact .contact-container--form form input,
+.contact .contact-container--form form textarea {
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+.contact .contact-container--form form button {
+  padding: 20px;
+  border: none;
+  background-color: orange;
+  cursor: pointer;
+  font-weight: 500;
+  transition-duration: 0.2s;
+  transition-property: scale;
+}
+.contact .contact-container--form form button:hover {
+  background-color: transparent;
+  border: 1px solid orange;
+  color: orange;
+}
+.contact .contact-container--form form button:active {
+  scale: 0.9;
+}/*# sourceMappingURL=Contact.css.map */
