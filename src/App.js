@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Parallax from "./components/Parallax/Parallax";
 import About from "./components/About/About";
 import StoriesAnimal from "./components/StoriesAnimal/StoriesAnimal";
+import Contact from "./components/Contact/Contact";
 
 import "./App.css";
 
@@ -24,7 +25,9 @@ const App = () => {
         <Parallax type="stories" />
       </section>
       <StoriesAnimal />
-      <section id="Contact">Contact</section>
+      <section id="Contact">
+        <Contact />
+      </section>
     </div>
   );
 };
