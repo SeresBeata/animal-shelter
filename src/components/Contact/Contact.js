@@ -1,5 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
 import "./Contact.css";
 
 //create const for animation
@@ -17,10 +19,37 @@ const Contact = () => {
   //use useRef Hook, in this case <div className="contact" is the targert>
   const ref = useRef();
 
+  //create const for EmialJS library
+  const formRef = useRef();
+
   //when target elemnt is visible, it triggers the useinView Hook
   //pass the target
   //add margin
   const isInView = useInView(ref, { margin: "-100px" });
+
+  //use useState for error in case of emeil sending
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  //create function for email sending
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_r4aw60j", "template_qzkoe2l", formRef.current, {
+        publicKey: "1D2zr8XI_pdYCGMGP",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setSuccess(true);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setError(true);
+        }
+      );
+  };
 
   return (
     <motion.div
@@ -81,15 +110,19 @@ const Contact = () => {
         </motion.div>
         {/* End: SVG */}
         <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           //whileInView={{ opacity: 1 }}
           animate={isInView && { opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea rows={8} placeholder="Message" />
+          <input type="text" placeholder="Name" required name="name" />
+          <input type="email" placeholder="Email" required name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
+          {error && "Error!"}
+          {success && "Success!"}
         </motion.form>
       </div>
     </motion.div>
