@@ -1,3 +1,47 @@
+/********************** GENERAL SETTINGS: START **********************/
+/* Color Palette and Typography: Start */
+/* End: Color Palette and Typography */
+/* html: Start */
+html {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* End: html */
+/* Universal Selector: Start */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* End: Universal Selector */
+/* Body: Start */
+body {
+  background-color: #0c0c1d;
+  color: #d3d3d3;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* End: Body */
+/* section: Start */
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/* End: section */
+/*  anchor: Start */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* End: anchor */
+/********************** END: GENERAL SETTINGS **********************/
+/********************** RESPONSIVE DESIGN: START **********************/
+/********************** END: RESPONSIVE DESIGN **********************/
 .contact {
   height: 100%;
   max-width: 1300px;
@@ -6,18 +50,50 @@
   align-items: center;
   gap: 50px;
 }
+@media (max-width: 738px) {
+  .contact {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
 .contact .contact-container--text {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+@media (max-width: 738px) {
+  .contact .contact-container--text {
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    flex: 0.5;
+  }
+}
 .contact .contact-container--text h1 {
   font-size: 100px;
   line-height: 88px;
 }
+@media (max-width: 738px) {
+  .contact .contact-container--text h1 {
+    font-size: 24px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 738px) {
+  .contact .contact-container--text h2 {
+    font-size: 15px;
+  }
+}
 .contact .contact-container--text span {
   font-weight: 300;
+}
+@media (max-width: 738px) {
+  .contact .contact-container--text span {
+    font-size: 14px;
+  }
 }
 .contact .contact-container--form {
   flex: 1;
@@ -27,6 +103,14 @@
   stroke: orange;
   position: absolute;
   margin: auto;
+  width: 450px;
+  height: 450px;
+}
+@media (max-width: 738px) {
+  .contact .contact-container--form .phone-svg {
+    width: 200px;
+    height: 200px;
+  }
 }
 .contact .contact-container--form form {
   display: flex;
@@ -59,4 +143,9 @@
 }
 .contact .contact-container--form form button:active {
   scale: 0.9;
+}
+@media (max-width: 738px) {
+  .contact .contact-container--form form button {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=Contact.css.map */
