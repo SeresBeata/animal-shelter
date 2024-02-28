@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import AboutMobile from "./AboutMobile/AboutMobile";
 
 import "./About.css";
 
@@ -115,6 +116,9 @@ const About = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+      {/* Mobile version: Start */}
+      <AboutMobile />
+      {/* End: Mobile version */}
     </>
   );
 };
