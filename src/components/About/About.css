@@ -95,10 +95,23 @@ a {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 738px) {
+  .about .about-title--container {
+    padding-top: 20px;
+    width: 100%;
+  }
+}
 .about .about-title--container .about-title {
   display: flex;
   align-items: center;
   gap: 50px;
+}
+@media (max-width: 738px) {
+  .about .about-title--container .about-title {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
 }
 .about .about-title--container .about-title img {
   width: 300px;
@@ -108,9 +121,20 @@ a {
      object-fit: cover;
   filter: opacity(0.75) drop-shadow(0 0 0 rgb(136, 0, 255));
 }
+@media (max-width: 738px) {
+  .about .about-title--container .about-title img {
+    width: 200px;
+    height: 50px;
+  }
+}
 .about .about-title--container .about-title h1 {
   font-size: 96px;
   font-weight: 100;
+}
+@media (max-width: 738px) {
+  .about .about-title--container .about-title h1 {
+    font-size: 36px;
+  }
 }
 .about .about-title--container .about-title button {
   width: 300px;
@@ -130,6 +154,13 @@ a {
 }
 .about .about-title--container .about-title button:active {
   scale: 0.9;
+}
+@media (max-width: 738px) {
+  .about .about-title--container .about-title button {
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
 }
 .about .about-list--container {
   flex: 2;

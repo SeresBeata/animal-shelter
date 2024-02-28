@@ -60,10 +60,21 @@ $about-brand-color-secondary: rgb(128, 128, 128);
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      padding-top: 20px;
+      width: 100%;
+    }
+
     .about-title {
       display: flex;
       align-items: center;
       gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
 
       img {
         width: 300px;
@@ -71,11 +82,20 @@ $about-brand-color-secondary: rgb(128, 128, 128);
         border-radius: 50px;
         object-fit: cover;
         filter: opacity(0.75) drop-shadow(0 0 0 rgb(136, 0, 255));
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
       }
 
       h1 {
         font-size: 96px;
         font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
       }
 
       button {
@@ -97,6 +117,12 @@ $about-brand-color-secondary: rgb(128, 128, 128);
         }
         &:active {
           scale: 0.9;
+        }
+
+        @include mobile {
+          font-size: 16px;
+          width: 200px;
+          height: 50px;
         }
       }
     }
