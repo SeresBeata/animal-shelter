@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 /* Color Palette and Typography: Start */
 $about-base-color-primary: #0c0c1d;
 $about-base-color-secondary: #111132;
@@ -23,17 +25,33 @@ $about-brand-color-secondary: rgb(128, 128, 128);
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     p {
       font-weight: 200;
       font-style: 200px;
       color: $about-brand-color-secondary;
       text-align: right;
+
+      @include mobile {
+        text-align: center;
+      }
     }
 
     hr {
       width: 500px;
       border: none;
       border-top: 0.5px solid $about-brand-color-secondary;
+
+      @include mobile {
+        width: 300px;
+
+        @media (max-width: 500px) {
+          width: 150px;
+        }
+      }
     }
   }
   .about-title--container {
@@ -42,10 +60,21 @@ $about-brand-color-secondary: rgb(128, 128, 128);
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      padding-top: 20px;
+      width: 100%;
+    }
+
     .about-title {
       display: flex;
       align-items: center;
       gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+      }
 
       img {
         width: 300px;
@@ -53,11 +82,20 @@ $about-brand-color-secondary: rgb(128, 128, 128);
         border-radius: 50px;
         object-fit: cover;
         filter: opacity(0.75) drop-shadow(0 0 0 rgb(136, 0, 255));
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
       }
 
       h1 {
         font-size: 96px;
         font-weight: 100;
+
+        @include mobile {
+          font-size: 34px;
+        }
       }
 
       button {
@@ -80,6 +118,13 @@ $about-brand-color-secondary: rgb(128, 128, 128);
         &:active {
           scale: 0.9;
         }
+
+        @include mobile {
+          font-size: 16px;
+          width: 200px;
+          height: 50px;
+          margin-bottom: 5px;
+        }
       }
     }
   }
@@ -89,12 +134,36 @@ $about-brand-color-secondary: rgb(128, 128, 128);
     max-width: 1300px;
     margin: auto;
 
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .about-list--box {
       padding: 50px;
       border: 0.5px solid $about-brand-color-secondary;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @include mobile {
+        border: none;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      h2 {
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+
+      p {
+        @include mobile {
+          display: none;
+        }
+      }
 
       button {
         padding: 10px;
@@ -112,7 +181,29 @@ $about-brand-color-secondary: rgb(128, 128, 128);
         &:active {
           scale: 0.9;
         }
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
+  }
+}
+
+.desktop-version {
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobile-version {
+  display: none;
+  @include mobile {
+    display: unset;
   }
 }
