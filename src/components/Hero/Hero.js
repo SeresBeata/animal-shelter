@@ -55,7 +55,7 @@ const Hero = () => {
           <motion.h1 variants={textVariants}>Let's protect animals!</motion.h1>
           <motion.div variants={textVariants} className="hero-btns">
             <motion.button variants={textVariants}>
-              See information about animals
+              See information
             </motion.button>
             <motion.button variants={textVariants}>
               Contact Shelter
@@ -79,11 +79,6 @@ const Hero = () => {
       </motion.div>
       <div className="hero-container--img">
         <img
-          style={{
-            marginRight: "100px",
-            height: "900px",
-            borderRadius: "20px",
-          }}
           src="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg"
           alt="cute dog"
         />
