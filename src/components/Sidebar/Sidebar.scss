@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 /* Color Palette and Typography: Start */
 $sidebar-base-color: #ffffff;
 $sidebar-text-color: #000000;
@@ -21,6 +23,10 @@ $sidebar-font-size: 40px;
     width: 400px;
     background-color: $sidebar-base-color;
 
+    @include mobile {
+      width: 200px;
+    }
+
     .links {
       position: absolute;
       width: 100%;
@@ -33,6 +39,10 @@ $sidebar-font-size: 40px;
 
       a {
         font-size: $sidebar-font-size;
+
+        @include mobile {
+          font-size: 20px;
+        }
       }
     }
   }
