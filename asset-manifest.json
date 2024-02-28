@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/animal-shelter/static/css/main.dd543920.css",
-    "main.js": "/animal-shelter/static/js/main.22e26bee.js",
+    "main.css": "/animal-shelter/static/css/main.a169187a.css",
+    "main.js": "/animal-shelter/static/js/main.ae62341a.js",
     "static/js/453.cc6e4612.chunk.js": "/animal-shelter/static/js/453.cc6e4612.chunk.js",
     "service-worker.js": "/animal-shelter/service-worker.js",
     "index.html": "/animal-shelter/index.html",
-    "main.dd543920.css.map": "/animal-shelter/static/css/main.dd543920.css.map",
-    "main.22e26bee.js.map": "/animal-shelter/static/js/main.22e26bee.js.map",
+    "main.a169187a.css.map": "/animal-shelter/static/css/main.a169187a.css.map",
+    "main.ae62341a.js.map": "/animal-shelter/static/js/main.ae62341a.js.map",
     "453.cc6e4612.chunk.js.map": "/animal-shelter/static/js/453.cc6e4612.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd543920.css",
-    "static/js/main.22e26bee.js"
+    "static/css/main.a169187a.css",
+    "static/js/main.ae62341a.js"
   ]
 }
