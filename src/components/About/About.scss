@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 /* Color Palette and Typography: Start */
 $about-base-color-primary: #0c0c1d;
 $about-base-color-secondary: #111132;
@@ -23,17 +25,33 @@ $about-brand-color-secondary: rgb(128, 128, 128);
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     p {
       font-weight: 200;
       font-style: 200px;
       color: $about-brand-color-secondary;
       text-align: right;
+
+      @include mobile {
+        text-align: center;
+      }
     }
 
     hr {
       width: 500px;
       border: none;
       border-top: 0.5px solid $about-brand-color-secondary;
+
+      @include mobile {
+        width: 300px;
+
+        @media (max-width: 500px) {
+          width: 150px;
+        }
+      }
     }
   }
   .about-title--container {
@@ -114,5 +132,18 @@ $about-brand-color-secondary: rgb(128, 128, 128);
         }
       }
     }
+  }
+}
+
+.desktop-version {
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobile-version {
+  display: none;
+  @include mobile {
+    display: unset;
   }
 }
