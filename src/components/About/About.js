@@ -35,7 +35,7 @@ const About = () => {
   return (
     <>
       <motion.div
-        className="about"
+        className="about desktop-version"
         variants={variants}
         initial="initial"
         // animate="animate"
