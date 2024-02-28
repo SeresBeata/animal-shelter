@@ -58,3 +58,22 @@ a {
 }
 /* End: anchor */
 /********************** END: GENERAL SETTINGS **********************/
+/********************** RESPONSIVE DESIGN: START **********************/
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin destop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+/********************** END: RESPONSIVE DESIGN **********************/
